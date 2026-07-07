@@ -3,32 +3,36 @@ classDiagram
         +string name
         +int duration
         +string priority
-        +edit(name, duration, priority) void
+        +bool completion_status
+        +edit(name, duration, priority, completion_status) void
     }
 
     class Owner {
         +string name
-        +List~Task~ tasks
         +List~Pet~ pets
         +addName(name) void
-        +addTask(task) void
-        +editTask(task) void
-        +removeTask(task) void
         +addPet(pet) void
+        +get_pets_tasks(name) List~Task~
     }
 
     class Pet {
         +string name
         +string species
+        +List~Task~ tasks
         +addName(name) void
         +addSpecies(species) void
+        +addTask(task) void
+        +editTask(task) void
+        +removeTask(name) void
+        +getTasks() List~Task~
+        +getTask() Task
     }
 
     class Scheduler {
         +generateSchedule(owner) List~Task~
-        +sortByPriorityAndDuration(tasks) List~Task~
-        +filterByTimeConstraints(tasks) List~Task~
-        +handleConflicts(tasks) List~Task~
+        +sortByPriorityAndDuration(owner) List~Task~
+        +filterByTimeConstraints(owner) List~Task~
+        +handleConflicts(owner) List~Task~
         +explainSchedule(schedule) string
     }
 
