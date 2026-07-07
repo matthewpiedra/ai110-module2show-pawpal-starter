@@ -4,8 +4,19 @@
 
 **a. Initial design**
 
-- Briefly describe your initial UML design.
+- Actions needed (for example):
+  - adding a pet
+  - scheduling a walk
+  - display today's tasks
+  - adding a task
+  - editing a task by adding a duration and priority
+- Briefly describe your initial UML design:
+  - Task class: represents a task with attributes for name (string), duration (int), and priority (string) (High, Medium, Low). Methods including creating and editing tasks.
+  - Owner class: represents a user with attributes for name (string), a list of tasks (Task objects), and a list of pets (Pet objects). Methods include adding and removing tasks and adding and removing pets and adding name.
+  - Pet class: represents a pet with attributes for name (string), species (string) (Dog, Cat, Other). Methods include adding name and species.
+  - Scheduler pure method class: responsible for generating a daily schedule based on the tasks of the owner and pet. Methods include sorting tasks by priority and duration, filtering tasks based on time constraints, and handling conflicts between overlapping tasks, and explaining the reasoning behind the schedule.
 - What classes did you include, and what responsibilities did you assign to each?
+  - I included a Task class to represent individual tasks, an Owner class to manage the user's information and their associated tasks, a Pet class to represent the pet's information, and a Scheduler class to handle the logic of generating a daily schedule based on the tasks and constraints provided by the owner and pet.
 
 **b. Design changes**
 
