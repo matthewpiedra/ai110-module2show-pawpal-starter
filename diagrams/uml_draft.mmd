@@ -10,8 +10,10 @@ classDiagram
     class Owner {
         +string name
         +List~Pet~ pets
-        +addName(name) void
+        +editName(name) void
         +addPet(pet) void
+        +getPet(name) Pet
+        +removePet(name) void
         +get_pets_tasks(name) List~Task~
     }
 
@@ -19,10 +21,10 @@ classDiagram
         +string name
         +string species
         +List~Task~ tasks
-        +addName(name) void
-        +addSpecies(species) void
+        +editName(name) void
+        +editSpecies(species) void
         +addTask(task) void
-        +editTask(task) void
+        +editTask(name) void
         +removeTask(name) void
         +getTasks() List~Task~
         +getTask() Task
@@ -33,7 +35,6 @@ classDiagram
         +sortByPriorityAndDuration(owner) List~Task~
         +filterByTimeConstraints(owner) List~Task~
         +handleConflicts(owner) List~Task~
-        +explainSchedule(schedule) string
     }
 
     Owner "1" --> "many" Task : creates/manages
