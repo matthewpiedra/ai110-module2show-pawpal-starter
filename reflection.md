@@ -21,7 +21,10 @@
 **b. Design changes**
 
 - Did your design change during implementation?
+  - Yes, I made some changes to the design during implementation. For example, I added methods for editing and removing tasks in the Owner class to allow for more flexibility in managing tasks.
+  - Also, removed the unnecessary create() method in Task class, as it was redundant with the constructor and not needed for the functionality of the app.
 - If yes, describe at least one change and why you made it.
+  - I added the `edit_task` and `remove_task` methods to the Owner class. This change was made to allow users to modify or delete tasks after they have been created, which is important for maintaining an accurate and up-to-date schedule. It provides users with the ability to adapt their plans as needed, reflecting real-life scenarios where priorities and time constraints can change.
 
 ---
 

@@ -6,9 +6,6 @@ class Task:
     name: str
     duration: int
     priority: str
-    
-    def create(self, name, duration, priority):
-        pass
 
     def edit(self, name=None, duration=None, priority=None):
         pass
@@ -38,7 +35,10 @@ class Owner:
     def add_task(self, task):
         pass
 
-    def edit_task(self, task):
+    def edit_task(self, task, name=None, duration=None, priority=None):
+        pass
+    
+    def remove_task(self, task):
         pass
 
     def add_pet(self, pet):
